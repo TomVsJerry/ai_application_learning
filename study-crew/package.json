@@ -8,8 +8,7 @@
     "dev": "agent-sdk dev"
   },
   "dependencies": {
-    "@grok/agent-sdk": "^0.6.0",
-    "zod": "^4.6.5"
+    "@grok/agent-sdk": "^0.6.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

@@ -39,21 +39,30 @@
 
 需要 Node.js 22.13 或更新版本。不要用 Bun。
 
+在仓库根目录执行。`node_modules` 不在 git 里，开发服务器用命令行自带的 Agent SDK，不需要先安装依赖。
+
+```bash
+npx @grok/agent-sdk dev
+```
+
+终端打印 playground 地址，一般是 http://127.0.0.1:3000/study-crew/playground 。3000 被占用时它会换端口，以终端里的地址为准。
+
+要做类型检查或本地工具调用时，再安装依赖：
+
 ```bash
 cd study-crew
-npx @grok/agent-sdk validate --dir .
-npx @grok/agent-sdk info --dir . --json
-npx @grok/agent-sdk tool call lookup_topic --dir . --input '{"topic":"subagent"}' --json
+npm install
+npx @grok/agent-sdk validate
+npx @grok/agent-sdk tool call lookup_topic --input '{"topic":"subagent"}' --json
 npm run check
 ```
 
-上面四条不需要登录。`lookup_topic` 会打印子智能体那一则笔记。
+`lookup_topic` 会打印子智能体那一则笔记。这些命令不需要登录。
 
 模型回合需要 Cursor 凭证。在你自己的终端登录一次：
 
 ```bash
 npx @grok/agent-sdk login
-npx @grok/agent-sdk dev --dir .
 ```
 
 打开 playground 后问：
