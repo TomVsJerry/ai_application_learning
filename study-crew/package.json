@@ -1,0 +1,18 @@
+{
+  "name": "study-crew",
+  "private": true,
+  "type": "module",
+  "description": "学习小队：协调者把一个问题交给研究员、撰写员和审阅员。",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "dev": "agent-sdk dev"
+  },
+  "dependencies": {
+    "@grok/agent-sdk": "^0.6.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "6.0.3"
+  }
+}
